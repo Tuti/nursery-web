@@ -5,33 +5,12 @@ import bgimage from '../images/plants-6.jpg';
 import p_image3 from '../images/plants-3.jpg';
 import p_image1 from '../images/plants-4.jpg';
 import p_image2 from '../images/plants-5.jpg';
-import mapboxgl, { Map } from 'mapbox-gl';
 import ContactForm from '../components/contact-form';
 import { Carousel, Container, Nav, Navbar } from 'react-bootstrap';
 import { useRouter } from 'next/router';
-import { useRef, useState, useEffect } from 'react';
-
-mapboxgl.accessToken =
-  'pk.eyJ1IjoidHV0aTExNSIsImEiOiJjbGJmbjYzZzkwN254M3JvYjJndmFxNmV3In0.MKp7pyU7wE_Tz-9mYMY0gQ';
 
 export default function Home() {
   const router = useRouter();
-
-  const mapContainer = useRef(null);
-  const map = useRef(null);
-  const [lng, setLng] = useState(-117.261);
-  const [lat, setLat] = useState(33.268);
-  const [zoom, setZoom] = useState(11);
-
-  useEffect(() => {
-    if (map.current) return; // initialize map only once
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v12',
-      center: [lng, lat],
-      zoom: zoom,
-    });
-  });
 
   return (
     <div className={styles['container']}>
@@ -133,8 +112,32 @@ export default function Home() {
             ></Image>
           </Carousel.Item>
         </Carousel>
-        <div ref={mapContainer} className={styles['map-container']} />
+        {/* <div ref={mapContainer} className={styles['map-container']} /> */}
       </main>
+      <footer className={styles['footer']}>
+        <div className={styles['location']}>
+          <div className={styles['footer-heading']}>Location:</div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7967.1173898893485!2d-117.26525835551986!3d33.27093650204568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc712d6941b873%3A0x6bb900596952027!2sLa%20Villa%20Sulla%20Collina%20Tropical%20Fruit%20U-Pick%20Orchard!5e0!3m2!1sen!2sus!4v1670868285926!5m2!1sen!2sus"
+            className={styles['google-map']}
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div className={styles['hours']}>
+          <div className={styles['footer-heading']}>Hours:</div>
+          <p style={{ margin: 0 }}>7:00AM - 5:00PM</p>
+        </div>
+        <div className={styles['contact']}>
+          <div className={styles['footer-heading']}>Contact:</div>
+          <p style={{ margin: 0 }}>(760) 123-4567</p>
+        </div>
+        <div className={styles['email']}>
+          <div></div>
+          <p style={{ margin: 0 }}>service@angelesnursery.com</p>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Roboto, Fira_Sans, Playfair_Display } from '@next/font/google';
+import { Roboto, Fira_Sans } from '@next/font/google';
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -15,9 +15,5 @@ const fira_sans = Fira_Sans({
 });
 
 export default function App({ Component, pageProps }) {
-  return (
-    <main className={`${fira_sans} ${roboto.className}`}>
-      <Component {...pageProps} />;
-    </main>
-  );
+  return <Component {...pageProps} />;
 }
