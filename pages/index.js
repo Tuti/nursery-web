@@ -134,7 +134,7 @@ export default function Home() {
           <p style={{ margin: 0 }}>(760) 123-4567</p>
         </div>
         <div className={styles['email']}>
-          <div></div>
+          <div>test</div>
           <p style={{ margin: 0 }}>service@angelesnursery.com</p>
         </div>
       </footer>
