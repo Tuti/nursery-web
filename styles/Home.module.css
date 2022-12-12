@@ -4,6 +4,9 @@
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .navbar {
@@ -18,10 +21,18 @@
 }
 
 .sub-heading {
+  font-family: fira-sans;
+  font-style: italic;
   font-size: 1.5em;
   color: #1d9044;
 }
 .text {
   margin: 1.5rem;
   font-size: 1.25rem;
+}
+
+.map-container {
+  border: 1px solid black;
+  margin: 1rem;
+  height: 400px;
 }

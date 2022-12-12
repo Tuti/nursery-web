@@ -5,13 +5,34 @@ import bgimage from '../images/plants-6.jpg';
 import p_image3 from '../images/plants-3.jpg';
 import p_image1 from '../images/plants-4.jpg';
 import p_image2 from '../images/plants-5.jpg';
-
+import mapboxgl, { Map } from 'mapbox-gl';
 import ContactForm from '../components/contact-form';
 import { Carousel, Container, Nav, Navbar } from 'react-bootstrap';
 import { useRouter } from 'next/router';
+import { useRef, useState, useEffect } from 'react';
+
+mapboxgl.accessToken =
+  'pk.eyJ1IjoidHV0aTExNSIsImEiOiJjbGJmbjYzZzkwN254M3JvYjJndmFxNmV3In0.MKp7pyU7wE_Tz-9mYMY0gQ';
 
 export default function Home() {
   const router = useRouter();
+
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+  const [lng, setLng] = useState(-117.261);
+  const [lat, setLat] = useState(33.268);
+  const [zoom, setZoom] = useState(11);
+
+  useEffect(() => {
+    if (map.current) return; // initialize map only once
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [lng, lat],
+      zoom: zoom,
+    });
+  });
+
   return (
     <div className={styles['container']}>
       <Head>
@@ -112,6 +133,7 @@ export default function Home() {
             ></Image>
           </Carousel.Item>
         </Carousel>
+        <div ref={mapContainer} className={styles['map-container']} />
       </main>
     </div>
   );
