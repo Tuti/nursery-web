@@ -36,10 +36,6 @@
   height: 400px;
 }
 
-.google-map {
-  border: 0;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -50,13 +46,25 @@
 }
 
 .footer-heading {
+  font-weight: bold;
   margin: 0.5rem 0;
   padding: 0.5rem 0;
-  width: min-content;
+  width: max-content;
   border-bottom: 1px solid black;
 }
 
+.info {
+  margin: 0;
+}
+
 .location {
+  display: flex;
+  flex-direction: column;
+}
+
+.google-map {
+  border: 0;
+  aspect-ratio: 2/1;
 }
 
 .hours {
@@ -66,8 +74,12 @@
 }
 
 @media (min-width: 600px) {
-  .footer {
+  /* .footer {
     flex-direction: row;
     gap: 1rem;
+  } */
+
+  .info {
+    flex-direction: row;
   }
 }

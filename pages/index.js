@@ -125,17 +125,16 @@ export default function Home() {
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div className={styles['hours']}>
-          <div className={styles['footer-heading']}>Hours:</div>
-          <p style={{ margin: 0 }}>7:00AM - 5:00PM</p>
-        </div>
-        <div className={styles['contact']}>
-          <div className={styles['footer-heading']}>Contact:</div>
-          <p style={{ margin: 0 }}>(760) 123-4567</p>
-        </div>
-        <div className={styles['email']}>
-          <div>test</div>
-          <p style={{ margin: 0 }}>service@angelesnursery.com</p>
+        <div className={styles['info-container']}>
+          <div className={styles['hours']}>
+            <div className={styles['footer-heading']}>Hours:</div>
+            <p className={styles['info']}>7:00AM - 5:00PM</p>
+          </div>
+          <div className={styles['contact']}>
+            <div className={styles['footer-heading']}>Contact Us:</div>
+            <p className={styles['info']}>Phone: (760) 123-4567</p>
+            <p className={styles['info']}>Email: service@angelesnursery.com</p>
+          </div>
         </div>
       </footer>
     </div>
