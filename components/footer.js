@@ -7,9 +7,9 @@ export default function Footer() {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7967.1173898893485!2d-117.26525835551986!3d33.27093650204568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc712d6941b873%3A0x6bb900596952027!2sLa%20Villa%20Sulla%20Collina%20Tropical%20Fruit%20U-Pick%20Orchard!5e0!3m2!1sen!2sus!4v1670868285926!5m2!1sen!2sus"
           className={styles['google-map']}
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
       <div className={styles['info-container']}>

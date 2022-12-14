@@ -51,67 +51,67 @@ export default function PhotoGallery() {
             className={styles['image']}
             src={pl4}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
           <Image
             className={styles['image']}
             src={pl5}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
           <Image
             className={styles['image']}
             src={pl6}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
           <Image
             className={styles['image']}
             src={pl7}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
           <Image
             className={styles['image']}
             src={pl8}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
           <Image
             className={styles['image']}
             src={pl9}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
           <Image
             className={styles['image']}
             src={pl10}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
           <Image
             className={styles['image']}
             src={pl11}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
           <Image
             className={styles['image']}
             src={pl12}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
           <Image
             className={styles['image']}
             src={pl13}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
           <Image
             className={styles['image']}
             src={pl14}
             alt="carousel image of plants"
-            priority
+            loading="lazy"
           ></Image>
         </div>
       </main>
