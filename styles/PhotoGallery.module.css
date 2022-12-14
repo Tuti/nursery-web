@@ -1,0 +1,35 @@
+.container {
+  height: 100%;
+}
+
+.main {
+}
+
+.separator {
+  margin: 4rem;
+}
+.image {
+  block-size: auto;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 840px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
