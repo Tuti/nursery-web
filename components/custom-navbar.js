@@ -1,6 +1,8 @@
 import styles from '../styles/components/navbar.module.css';
+import Image from 'next/image';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { useRouter } from 'next/router';
+import TreeIcon from './tree-icon';
 
 export default function CustomNavbar() {
   const router = useRouter();
@@ -12,7 +14,16 @@ export default function CustomNavbar() {
       fixed="top"
     >
       <Container>
-        <Navbar.Brand>Angeles Nursery</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <Image
+            alt=""
+            src="/tree.svg"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />{' '}
+          Angeles Nursery{' '}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse>
           <Nav>
