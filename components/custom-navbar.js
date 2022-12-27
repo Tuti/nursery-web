@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import TreeIcon from './tree-icon';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 export default function CustomNavbar() {
   const router = useRouter();
   return (
@@ -13,7 +13,7 @@ export default function CustomNavbar() {
       expand="lg"
       fixed="top"
     >
-      <Container>
+      <Container className={'m-nav'}>
         <Navbar.Brand href="/">
           <Image
             alt=""
