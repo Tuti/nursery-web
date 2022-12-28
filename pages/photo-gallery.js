@@ -25,7 +25,6 @@ export default function PhotoGallery() {
         <title>Photo Gallery</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CustomNavbar />
       <main className={styles['main']}>
         <div className={styles['separator']}></div>
         <div className={styles['gallery']}>

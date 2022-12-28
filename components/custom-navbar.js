@@ -1,56 +1,38 @@
 import styles from '../styles/components/navbar.module.css';
 import Image from 'next/image';
-import { Container, Navbar, Nav } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import TreeIcon from './tree-icon';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import MenuIcon from '@mui/icons-material/Menu';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Button,
+} from '@mui/material';
+
 export default function CustomNavbar() {
   const router = useRouter();
   return (
-    <Navbar
-      variant="light"
-      className={styles['navbar']}
-      expand="lg"
-      fixed="top"
-    >
-      <Container className={'m-nav'}>
-        <Navbar.Brand href="/">
-          <Image
-            alt=""
-            src="/tree.svg"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{' '}
-          Angeles Nursery{' '}
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse>
-          <Nav>
-            <Nav.Link
-              onClick={() => {
-                router.push('/');
-              }}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => {
-                router.push('photo-gallery');
-              }}
-            >
-              Photo Gallery
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => {
-                router.push('contact');
-              }}
-            >
-              Contact
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" sx={{ backgroundColor: '#1e7739' }}>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Angeles Nursery
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }

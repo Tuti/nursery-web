@@ -1,5 +1,4 @@
 import '../styles/globals.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Roboto, Fira_Sans } from '@next/font/google';
 
 const roboto = Roboto({

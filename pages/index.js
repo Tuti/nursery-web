@@ -1,7 +1,6 @@
 import styles from '../styles/Home.module.css';
 import Head from 'next/head';
 import Image from 'next/image';
-import { Carousel } from 'react-bootstrap';
 import Footer from '../components/footer';
 import CustomNavbar from '../components/custom-navbar';
 import bgimage from '../public/plants-6.jpg';
@@ -18,12 +17,12 @@ export default function Home() {
       </Head>
       <CustomNavbar />
       <main className={styles['main']}>
-        <Image
+        {/* <Image
           className={styles['image']}
           src={bgimage}
           alt="image of plants used for background"
           priority
-        ></Image>
+        ></Image> */}
         <div className={styles['text']}>
           <div className={styles['text-item']}>
             <h2 className={styles['sub-heading']}>Welcome</h2>
@@ -60,7 +59,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles['carousel-wrapper']}>
-          <Carousel className={styles['bs-carousel']}>
+          {/* <Carousel className={styles['bs-carousel']}>
             <Carousel.Item>
               <Image
                 className={styles['image']}
@@ -85,7 +84,7 @@ export default function Home() {
                 priority
               ></Image>
             </Carousel.Item>
-          </Carousel>
+          </Carousel> */}
         </div>
       </main>
       <Footer />
