@@ -2,6 +2,18 @@ import styles from '../styles/components/footer.module.css';
 export default function Footer() {
   return (
     <footer className={styles['footer']}>
+      <div className={styles['hours']}>
+        <div className={styles['footer-heading']}>Hours:</div>
+        <p className={styles['info']}>7:00AM - 5:00PM</p>
+      </div>
+      <div className={styles['call']}>
+        <div className={styles['footer-heading']}>Call:</div>
+        <p className={styles['info']}>(123) 456-7890</p>
+      </div>
+      <div className={styles['email']}>
+        <div className={styles['footer-heading']}>Email:</div>
+        <p className={styles['info']}>service@angelesnursery.com</p>
+      </div>
       <div className={styles['location']}>
         <div className={styles['footer-heading']}>Location:</div>
         <iframe
@@ -11,20 +23,6 @@ export default function Footer() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div>
-      <div className={styles['info-container']}>
-        <div className={styles['hours']}>
-          <div className={styles['footer-heading']}>Hours:</div>
-          <p className={styles['info']}>7:00AM - 5:00PM</p>
-        </div>
-        <div className={styles['call']}>
-          <div className={styles['footer-heading']}>Call:</div>
-          <p className={styles['info']}>(123) 456-7890</p>
-        </div>
-        <div className={styles['email']}>
-          <div className={styles['footer-heading']}>Email:</div>
-          <p className={styles['info']}>service@angelesnursery.com</p>
-        </div>
       </div>
     </footer>
   );
