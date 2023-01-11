@@ -9,16 +9,12 @@ import {
   MenuItem,
   ThemeProvider,
 } from '@mui/material';
-import TreeIcon from '../icons/tree-icon';
+import TreeIcon from '../../icons/tree-icon';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
-import { useTheme } from '@emotion/react';
 
 export default function Navbar() {
-  const theme = useTheme();
-
   const pages = ['Home', 'Photo Gallery', 'Contact'];
-
   const [anchorElemNav, setAnchorElemNav] = useState(null);
 
   function handleOpenNavMenu(event) {

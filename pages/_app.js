@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '../styles/globals.scss';
 import { Roboto, Fira_Sans, Sanchez } from '@next/font/google';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
@@ -34,7 +34,6 @@ const theme = createTheme({
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline enableColorScheme />
       <div className={`${sanchez.className}`}>
         <Component {...pageProps} />
       </div>

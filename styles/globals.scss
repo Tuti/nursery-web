@@ -2,6 +2,7 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
+
 *,
 *::before,
 *::after {
@@ -58,4 +59,11 @@ a {
 #root,
 #__next {
   isolation: isolate;
+}
+
+@font-face {
+  font-family: 'sanchez';
+  src: url('../fonts/Sanchez/Sanchez-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
